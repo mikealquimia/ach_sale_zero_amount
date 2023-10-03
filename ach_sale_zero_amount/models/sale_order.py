@@ -6,9 +6,9 @@ from odoo.exceptions import ValidationError
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    state = fields.Selection(selection_add=[('static', 'Por Aprobar')])
-    zero_amount_approval = fields.Boolean(string="Aprobación monto cero")
-    zero_amount_approval_user_id = fields.Many2one('res.users', string="Aprobador de Venta Monto Cero")
+    state = fields.Selection(selection_add=[('static', 'To be approved')])
+    zero_amount_approval = fields.Boolean(string="Zero amount approval")
+    zero_amount_approval_user_id = fields.Many2one('res.users', string="Zero Amount Sale Approver")
 
     @api.multi
     def action_confirm(self):

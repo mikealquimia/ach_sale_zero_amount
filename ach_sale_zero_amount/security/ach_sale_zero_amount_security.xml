@@ -3,7 +3,7 @@
     <data noupdate="1">
 
         <record id="group_ach_sale_zero_amount_manager" model="res.groups">
-            <field name="name">Validador de Ventas a Monto Cero</field>
+            <field name="name">Zero Amount Sales Validator</field>
         </record>
 
     </data>

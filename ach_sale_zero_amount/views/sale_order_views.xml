@@ -8,9 +8,9 @@
       <field name="type">form</field>
       <field name="arch" type="xml">
         <xpath expr="//button[@id='action_confirm']" position="after">
-          <button name="action_approve_zero_amount" string="Aprobar Venta Monto Cero" type="object" attrs="{'invisible': [('state', '!=', 'static')]}" groups="ach_sale_zero_amount.group_ach_sale_zero_amount_manager"/>
-          <button name="action_draft" states="cancel" type="object" string="Rechazar" attrs="{'invisible': [('state', '!=', 'static')]}" groups="ach_sale_zero_amount.group_ach_sale_zero_amount_manager"/>
-          <button name="action_cancel" states="draft,sent,sale" type="object" string="Cancelar" attrs="{'invisible': [('state', '!=', 'static')]}" groups="ach_sale_zero_amount.group_ach_sale_zero_amount_manager"/>
+          <button name="action_approve_zero_amount" string="Approve Sale Amount Zero" type="object" attrs="{'invisible': [('state', '!=', 'static')]}" groups="ach_sale_zero_amount.group_ach_sale_zero_amount_manager"/>
+          <button name="action_draft" states="cancel" type="object" string="Decline" attrs="{'invisible': [('state', '!=', 'static')]}" groups="ach_sale_zero_amount.group_ach_sale_zero_amount_manager"/>
+          <button name="action_cancel" states="draft,sent,sale" type="object" string="Cancel" attrs="{'invisible': [('state', '!=', 'static')]}" groups="ach_sale_zero_amount.group_ach_sale_zero_amount_manager"/>
         </xpath>
         <xpath expr="//field[@name='payment_term_id']" position="after">
           <field name="zero_amount_approval" invisible="1"/>
