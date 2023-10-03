@@ -8,7 +8,7 @@
     'support': 'developmentalchemygx@gmail.com',
     'version': '0.1',
     'category': 'Sales',
-    'live_test_url': 'https://youtu.be/LThzRWMUd2c',
+    'live_test_url': 'https://youtu.be/Qdi06kIFVMs',
     'price': 1.75,
     'currency': 'USD',
     'depends': ['base','sale'],
