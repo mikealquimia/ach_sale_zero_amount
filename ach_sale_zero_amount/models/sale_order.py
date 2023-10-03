@@ -10,7 +10,6 @@ class SaleOrder(models.Model):
     zero_amount_approval = fields.Boolean(string="Zero amount approval")
     zero_amount_approval_user_id = fields.Many2one('res.users', string="Zero Amount Sale Approver")
 
-    @api.multi
     def action_confirm(self):
         for rec in self:
             if rec.amount_total == 0 and rec.zero_amount_approval == False:
@@ -19,7 +18,6 @@ class SaleOrder(models.Model):
         res = super(SaleOrder, self).action_confirm()
         return res
 
-    @api.multi
     def action_draft(self):
         for rec in self:
             if rec.amount_total == 0 and rec.zero_amount_approval == False:
@@ -28,7 +26,6 @@ class SaleOrder(models.Model):
         res = super(SaleOrder, self).action_draft()
         return res
 
-    @api.multi
     def action_approve_zero_amount(self):
         self.write({'zero_amount_approval':True})
         self.write({'zero_amount_approval_user_id':self.env.user.id})
