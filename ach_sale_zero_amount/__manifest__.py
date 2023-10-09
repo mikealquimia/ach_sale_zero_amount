@@ -3,7 +3,7 @@
     'name': "Approve Sale Order Zero Amount",
     'summary': """Module to approve sales with zero amount""",
     'description': """Module to approve sales with zero amount""",
-    'author': "Gt Alchemy Development",
+    'author': "ACH Alchemical Code",
     'license': 'LGPL-3',
     'support': 'developmentalchemygx@gmail.com',
     'version': '0.1',
