@@ -1,0 +1,132 @@
+<section class="oe_container">
+
+    <div class="oe_row oe_spaced" style="text-align:center; padding: 20px 0;">
+        <img src="icon.png" style="width:84px;height:84px;border-radius:50%;" alt="ACH Alchemical Code"/>
+        <h1 style="margin-top:10px;">Approve Sale Order Zero Amount</h1>
+        <h4 style="color:#8B5E34;">Stop $0.00 quotations from confirming themselves - require a manager's sign-off first</h4>
+    </div>
+
+    <!-- ==================== FEATURE GRID ==================== -->
+    <div class="oe_row oe_spaced">
+        <table style="width:100%; text-align:center;">
+            <tr>
+                <td>Blocks $0 confirmations</td>
+                <td>Dedicated approval state</td>
+                <td>Approver tracked on the order</td>
+                <td>Odoo 19</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2 style="text-align:center; margin-top:30px;">A safety net for quotations that would confirm at zero cost</h2>
+    <p style="text-align:center; color:#555;">A quote with no order lines, a 100% discount, or a pricing mistake can slip through and get confirmed at $0.00. This module catches it at the moment of confirmation and routes it to a manager instead.</p>
+
+    <!-- ==================== FEATURE BLOCKS (emoji + title + text) ==================== -->
+    <div class="oe_row oe_spaced">
+        <table style="width:100%;">
+            <tr>
+                <td style="width:50%; vertical-align:top; padding:15px;">
+                    <h3>&#128721; Confirmation gate</h3>
+                    <p>If a quotation's total is exactly $0.00, clicking "Confirm" no longer confirms the order - it moves it to a "To be approved" state instead.</p>
+                </td>
+                <td style="width:50%; vertical-align:top; padding:15px;">
+                    <h3>&#128274; Restricted approval group</h3>
+                    <p>Only users in the "Zero Amount Sales Validator" group see the Approve/Decline/Cancel buttons on a pending order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%; vertical-align:top; padding:15px;">
+                    <h3>&#9989; One-click approval</h3>
+                    <p>The approver clicks "Approve Sale Amount Zero" and the order confirms normally, exactly like a regular sale order from that point on.</p>
+                </td>
+                <td style="width:50%; vertical-align:top; padding:15px;">
+                    <h3>&#128203; Approver on record</h3>
+                    <p>The approving user is stamped on the order (Zero Amount Sale Approver field) for a clear audit trail.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <h2 style="text-align:center; margin-top:30px;">How it works</h2>
+    <table style="width:100%;">
+        <tr>
+            <td style="width:5%; font-size:22px; font-weight:bold; color:#8B5E34;">1</td>
+            <td><strong>Salesperson confirms a $0.00 quotation</strong><br/>Instead of becoming a Sales Order, it moves to "To be approved" and the normal Confirm button disappears.</td>
+        </tr>
+        <tr>
+            <td style="width:5%; font-size:22px; font-weight:bold; color:#8B5E34;">2</td>
+            <td><strong>A validator reviews it</strong><br/>Anyone in the Zero Amount Sales Validator group can Approve, Decline (send back to draft) or Cancel it from that same screen.</td>
+        </tr>
+        <tr>
+            <td style="width:5%; font-size:22px; font-weight:bold; color:#8B5E34;">3</td>
+            <td><strong>Approved orders confirm normally</strong><br/>Once approved, the order becomes a real Sales Order and the approver's name stays on the record.</td>
+        </tr>
+    </table>
+
+    <!-- ==================== SCREENSHOTS ==================== -->
+    <h2 style="text-align:center; margin-top:30px;">See it in Odoo 19</h2>
+    <table style="width:100%;">
+        <tr>
+            <td style="width:50%; padding:10px;">
+                <img src="screenshot_1.png" style="width:100%; border:1px solid #ddd;" alt="Zero-amount quotation blocked in the To be approved state, with Approve/Decline/Cancel buttons"/>
+                <p style="text-align:center; color:#777;">Confirming a $0.00 quote routes it to "To be approved" instead of confirming it</p>
+            </td>
+            <td style="width:50%; padding:10px;">
+                <img src="screenshot_2.png" style="width:100%; border:1px solid #ddd;" alt="Sales order confirmed after approval, showing the Zero Amount Sale Approver field"/>
+                <p style="text-align:center; color:#777;">After approval the order confirms normally and the approver is on record</p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- ==================== WHY THIS MODULE ==================== -->
+    <h2 style="text-align:center; margin-top:30px;">Why this module</h2>
+    <table style="width:100%;">
+        <tr>
+            <td style="width:5%; color:green; font-weight:bold;">&#10003;</td>
+            <td><strong>No accidental $0.00 sales orders.</strong> Pricing mistakes and empty quotes get caught before they become confirmed orders.</td>
+        </tr>
+        <tr>
+            <td style="width:5%; color:green; font-weight:bold;">&#10003;</td>
+            <td><strong>Lightweight.</strong> One small model extension and one view, no extra menus or settings screens to learn.</td>
+        </tr>
+        <tr>
+            <td style="width:5%; color:green; font-weight:bold;">&#10003;</td>
+            <td><strong>Group-controlled.</strong> You decide exactly who can approve, using a standard Odoo security group.</td>
+        </tr>
+    </table>
+
+    <!-- ==================== REQUIREMENTS ==================== -->
+    <h2 style="text-align:center; margin-top:30px;">Requirements</h2>
+    <table style="width:100%; border-collapse:collapse;">
+        <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:6px; font-weight:bold;">Odoo version</td>
+            <td style="padding:6px;">19.0 (Community or Enterprise)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:6px; font-weight:bold;">Dependencies</td>
+            <td style="padding:6px;">Sales (sale)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:6px; font-weight:bold;">Interface language</td>
+            <td style="padding:6px;">English</td>
+        </tr>
+    </table>
+
+    <!-- ==================== FAQ ==================== -->
+    <h2 style="text-align:center; margin-top:30px;">Frequently asked questions</h2>
+    <p><strong>Does this block every sale order, or just $0.00 ones?</strong><br/>Only orders whose total is exactly $0.00. Any order with a positive total confirms exactly as it does in stock Odoo.</p>
+    <p><strong>Who can approve a pending order?</strong><br/>Any user you add to the "Zero Amount Sales Validator" security group (Settings &gt; Users &amp; Companies &gt; Groups).</p>
+    <p><strong>Can I still see a short demo of the flow?</strong><br/><a href="https://youtu.be/Qdi06kIFVMs" target="_blank">Watch the workflow in action</a>.</p>
+
+    <!-- ==================== FIXED FOOTER — DO NOT CHANGE ==================== -->
+    <div class="oe_row oe_spaced" style="text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid #eee;">
+        <img src="icon.png" style="width:48px;height:48px;border-radius:50%;" alt="ACH Alchemical Code"/>
+        <p style="font-weight:bold; margin-top:8px;">ACH Alchemical Code</p>
+        <p style="color:#777;">
+            Questions before you buy, or need support after installing?<br/>
+            Contact us: mikealquimia@gmail.com
+        </p>
+    </div>
+
+</section>
